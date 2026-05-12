@@ -18,6 +18,10 @@
 pip install numpy scipy
 #or
 pip install -r requirements.txt
+then: 
+```
+```bash
+python applicant_solution.py
 ```
 
 ---
@@ -30,3 +34,10 @@ pip install -r requirements.txt
 | Dimensionality Reduction | EVD-based spatial filtering (similar to PCA).             |
 | Regularization           | Tikhonov-like diagonal loading for covariance stability.  |
 | Iterative Processing     | Two-pass approach to handle non-linearities or residuals. |
+
+## failed attempts:
+firstly i tried to make linear model by scipy.linalg, MLP and CNN models, 
+but they didnt pass the check or had worse results than baseline model. then 
+i started to dive into self interference cancellation and it led me to my result!
+At first i tried tikhonov-like regularization then added evd filter and 99th percentile and it gave me 7.3 db.
+Finally i added two pass approach and result were 11+ db!
